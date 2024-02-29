@@ -1,0 +1,61 @@
+/* calculator 공통 */
+.wrap {
+    width: 240px;
+    background-color: #777;
+    border-radius: 5px;
+    padding: 20px;
+}
+.calculator {
+    width: 200px;
+    background-color: #ededed;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+
+/* numBox */
+.numBox {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+}
+.numBox input[type="text"] {
+    grid-column: span 4;
+    width: 100%;
+    padding: 4px;
+    font-size: 16px;
+    border-radius: 10px;
+    background-color: #222;
+    color: #fff;
+    text-align: right;
+}
+
+.numBox input[type="button"] {
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    background-color: #777;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 50%;
+}
+.numBox input[value="0"] {
+    border-radius: 20px;
+}
+.numBox input[value="/"],.numBox input[value="-"],.numBox input[value="x"],.numBox input[value="+"],.numBox input[value="="] {
+    background-color: green;
+}
+
+.numBox input[type="button"]:hover {
+    background-color: #e0e0e0;
+}
+
+.numBox input[type="button"]:active {
+    background-color: #ccc;
+}
+
+.numBox input[value="0"] {
+    grid-column: span 2;
+}
